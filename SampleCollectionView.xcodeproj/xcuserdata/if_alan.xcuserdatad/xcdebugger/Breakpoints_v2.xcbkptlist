@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B0E7AC07-89B2-402D-83EA-CDA4B58BEAE2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9220A8F5-2097-41DD-8A66-DB8965858799"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleCollectionView/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9220A8F5-2097-41DD-8A66-DB8965858799 - 3f7c669c1db57feb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SampleCollectionView.AppDelegate.__deallocating_deinit"
+                  moduleName = "SampleCollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/if_alan/Documents/If%20Alan/iOSProjects/SampleCollectionView/SampleCollectionView/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9220A8F5-2097-41DD-8A66-DB8965858799 - 7c8814c5347089e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SampleCollectionView.AppDelegate.__allocating_init() -&gt; SampleCollectionView.AppDelegate"
+                  moduleName = "SampleCollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/if_alan/Documents/If%20Alan/iOSProjects/SampleCollectionView/SampleCollectionView/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9220A8F5-2097-41DD-8A66-DB8965858799 - ee24205a385ac5bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SampleCollectionView.AppDelegate.init() -&gt; SampleCollectionView.AppDelegate"
+                  moduleName = "SampleCollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/if_alan/Documents/If%20Alan/iOSProjects/SampleCollectionView/SampleCollectionView/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  uuid = "9220A8F5-2097-41DD-8A66-DB8965858799 - d9ea142f1abab38a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "SampleCollectionView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/if_alan/Documents/If%20Alan/iOSProjects/SampleCollectionView/SampleCollectionView/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

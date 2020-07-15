@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		27DA52CF24BD2756008CBAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA52CE24BD2756008CBAEB /* AppDelegate.swift */; };
 		27DA52D124BD2756008CBAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA52D024BD2756008CBAEB /* SceneDelegate.swift */; };
-		27DA52D324BD2756008CBAEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA52D224BD2756008CBAEB /* ViewController.swift */; };
 		27DA52D624BD2756008CBAEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DA52D424BD2756008CBAEB /* Main.storyboard */; };
 		27DA52D824BD275D008CBAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DA52D724BD275D008CBAEB /* Assets.xcassets */; };
 		27DA52DB24BD275D008CBAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DA52D924BD275D008CBAEB /* LaunchScreen.storyboard */; };
+		27DA52E324BD2A0D008CBAEB /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA52E224BD2A0D008CBAEB /* SampleCollectionViewController.swift */; };
+		27DA52E524BD2B8E008CBAEB /* SampleCollectionViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA52E424BD2B8E008CBAEB /* SampleCollectionViewController+CollectionView.swift */; };
+		27DA52E924BD3584008CBAEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA52E824BD3584008CBAEB /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27DA52CB24BD2756008CBAEB /* SampleCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DA52CE24BD2756008CBAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DA52D024BD2756008CBAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27DA52D224BD2756008CBAEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27DA52D524BD2756008CBAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27DA52D724BD275D008CBAEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27DA52DA24BD275D008CBAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27DA52DC24BD275D008CBAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27DA52E224BD2A0D008CBAEB /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		27DA52E424BD2B8E008CBAEB /* SampleCollectionViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleCollectionViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		27DA52E824BD3584008CBAEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				27DA52CE24BD2756008CBAEB /* AppDelegate.swift */,
-				27DA52D024BD2756008CBAEB /* SceneDelegate.swift */,
-				27DA52D224BD2756008CBAEB /* ViewController.swift */,
-				27DA52D424BD2756008CBAEB /* Main.storyboard */,
 				27DA52D724BD275D008CBAEB /* Assets.xcassets */,
-				27DA52D924BD275D008CBAEB /* LaunchScreen.storyboard */,
 				27DA52DC24BD275D008CBAEB /* Info.plist */,
+				27DA52D924BD275D008CBAEB /* LaunchScreen.storyboard */,
+				27DA52D424BD2756008CBAEB /* Main.storyboard */,
+				27DA52E224BD2A0D008CBAEB /* SampleCollectionViewController.swift */,
+				27DA52E424BD2B8E008CBAEB /* SampleCollectionViewController+CollectionView.swift */,
+				27DA52D024BD2756008CBAEB /* SceneDelegate.swift */,
+				27DA52E824BD3584008CBAEB /* ViewController.swift */,
 			);
 			path = SampleCollectionView;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27DA52D324BD2756008CBAEB /* ViewController.swift in Sources */,
+				27DA52E924BD3584008CBAEB /* ViewController.swift in Sources */,
+				27DA52E524BD2B8E008CBAEB /* SampleCollectionViewController+CollectionView.swift in Sources */,
+				27DA52E324BD2A0D008CBAEB /* SampleCollectionViewController.swift in Sources */,
 				27DA52CF24BD2756008CBAEB /* AppDelegate.swift in Sources */,
 				27DA52D124BD2756008CBAEB /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
