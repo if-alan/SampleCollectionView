@@ -8,6 +8,13 @@
 import UIKit
 
 class SampleCollectionViewController: UIViewController {
+    var listData = [
+        ["",""],
+        ["","",""],
+        [""],
+        ["","","",""]
+    ]
+    
     var cellId = "testId"
     var headerId = "headerId"
     
@@ -30,10 +37,29 @@ class SampleCollectionViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(SikatCustomCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
+    
+    /** CUSTOM CELL */
+    class SikatCustomCell: UICollectionViewCell {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            let leftView = UIView()
+            leftView.backgroundColor = .green
+            leftView.translatesAutoresizingMaskIntoConstraints = false
+            backgroundColor = .red
+            
+            addSubview(leftView)
+            leftView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+            leftView.trailingAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            leftView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            leftView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+        }
+        
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
 }
-
-
-
