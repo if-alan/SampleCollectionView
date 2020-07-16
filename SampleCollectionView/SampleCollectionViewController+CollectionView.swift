@@ -10,7 +10,7 @@ import UIKit
 
 extension SampleCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    /** SUM ROW  */
+    /** SUM COLUMN  */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
@@ -22,17 +22,24 @@ extension SampleCollectionViewController: UICollectionViewDataSource, UICollecti
         return cell
     }
     
-    /** SUM COLUMN  */
+    /** SUM ROW  */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
     
-    /** SPACE BETWEEN COLUMN*/
+    /** SPACE BETWEEN ROW*/
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 100)
+        return CGSize(width: collectionView.frame.width, height: 10)
     }
     
-    /** SPACE BETWEEN ROW*/
+    /** SET COLOR FOR SPACE BETWEEN ROW*/
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath)
+        headerView.backgroundColor = .yellow
+        return headerView
+    }
+    
+    /** SPACE BETWEEN COLUMN*/
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 50)
     }

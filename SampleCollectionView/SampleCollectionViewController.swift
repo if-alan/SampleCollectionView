@@ -9,6 +9,7 @@ import UIKit
 
 class SampleCollectionViewController: UIViewController {
     var cellId = "testId"
+    var headerId = "headerId"
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -30,6 +31,7 @@ class SampleCollectionViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
 }
 
