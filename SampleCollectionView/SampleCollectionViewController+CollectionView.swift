@@ -27,8 +27,13 @@ extension SampleCollectionViewController: UICollectionViewDataSource, UICollecti
         return 3
     }
     
-    /** HEADER */
+    /** SPACE BETWEEN COLUMN*/
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 20)
+        return CGSize(width: collectionView.frame.width, height: 100)
+    }
+    
+    /** SPACE BETWEEN ROW*/
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 50, height: 50)
     }
 }
