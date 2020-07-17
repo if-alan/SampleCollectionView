@@ -34,12 +34,12 @@ extension SampleCollectionViewController: UICollectionViewDataSource, UICollecti
     /** SET COLOR FOR SPACE BETWEEN ROW*/
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath)
-        headerView.backgroundColor = .yellow
+        headerView.backgroundColor = .white
         return headerView
     }
     
     /** SPACE BETWEEN COLUMN*/
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50, height: 50)
+        return CGSize(width: collectionView.frame.width, height: 300)
     }
 }

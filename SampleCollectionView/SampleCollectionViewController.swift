@@ -9,10 +9,9 @@ import UIKit
 
 class SampleCollectionViewController: UIViewController {
     var listData = [
-        ["",""],
-        ["","",""],
         [""],
-        ["","","",""]
+        [""],
+        [""],
     ]
     
     var cellId = "testId"
@@ -21,7 +20,7 @@ class SampleCollectionViewController: UIViewController {
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .gray
+        cv.backgroundColor = .red
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
@@ -37,25 +36,24 @@ class SampleCollectionViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(SikatCustomCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
     /** CUSTOM CELL */
-    class SikatCustomCell: UICollectionViewCell {
+    class CustomCell: UICollectionViewCell {
         
         override init(frame: CGRect) {
             super.init(frame: frame)
-            let leftView = UIView()
-            leftView.backgroundColor = .green
-            leftView.translatesAutoresizingMaskIntoConstraints = false
-            backgroundColor = .red
+            let cardView = UIView()
+            cardView.backgroundColor = .green
+            cardView.translatesAutoresizingMaskIntoConstraints = false
             
-            addSubview(leftView)
-            leftView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-            leftView.trailingAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            leftView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-            leftView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+            addSubview(cardView)
+            cardView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
+            cardView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+            cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            cardView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
         }
         
         required init?(coder: NSCoder) {
