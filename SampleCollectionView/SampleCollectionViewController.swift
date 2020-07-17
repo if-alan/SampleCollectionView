@@ -6,12 +6,18 @@
 //  Copyright © 2020 Nur If Alan Farizi. All rights reserved.
 //
 import UIKit
+struct SikatData {
+    var title : String
+    var description : String
+}
 
 class SampleCollectionViewController: UIViewController {
-    var listData = [
-        [""],
-        [""],
-        [""],
+    let listData: [SikatData] = [
+        SikatData(title: "Farel", description: "yo yo yo"),
+        SikatData(title: "Zaini", description: "yo yo yo"),
+        SikatData(title: "Sukmo", description: "yo yo yo"),
+        SikatData(title: "Redha", description: "yo yo yo"),
+        SikatData(title: "Alan", description: "yo yo yo")
     ]
     
     var cellId = "testId"
@@ -42,6 +48,7 @@ class SampleCollectionViewController: UIViewController {
     
     /** CUSTOM CELL */
     class CustomCell: UICollectionViewCell {
+        let label = UILabel()
         override init(frame: CGRect) {
             super.init(frame: frame)
             let cardView = UIView()
@@ -54,13 +61,15 @@ class SampleCollectionViewController: UIViewController {
             cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
             cardView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
             
-            let label = UILabel()
-            label.text = "testing"
             label.translatesAutoresizingMaskIntoConstraints = false
             
             cardView.addSubview(label)
             label.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 20).isActive = true
             label.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -20).isActive = true
+        }
+        
+        func sikatSet(data:SikatData){
+            label.text = data.title
         }
         
         required init?(coder: NSCoder) {
