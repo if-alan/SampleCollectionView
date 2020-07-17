@@ -42,18 +42,25 @@ class SampleCollectionViewController: UIViewController {
     
     /** CUSTOM CELL */
     class CustomCell: UICollectionViewCell {
-        
         override init(frame: CGRect) {
             super.init(frame: frame)
             let cardView = UIView()
             cardView.backgroundColor = .green
             cardView.translatesAutoresizingMaskIntoConstraints = false
-            
             addSubview(cardView)
+            
             cardView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
             cardView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
             cardView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
             cardView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+            
+            let label = UILabel()
+            label.text = "testing"
+            label.translatesAutoresizingMaskIntoConstraints = false
+            
+            cardView.addSubview(label)
+            label.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 20).isActive = true
+            label.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -20).isActive = true
         }
         
         required init?(coder: NSCoder) {
