@@ -49,6 +49,7 @@ class SampleCollectionViewController: UIViewController {
     /** CUSTOM CELL */
     class CustomCell: UICollectionViewCell {
         let label = UILabel()
+        let labelDeskripsi = UILabel()
         override init(frame: CGRect) {
             super.init(frame: frame)
             let cardView = UIView()
@@ -62,14 +63,22 @@ class SampleCollectionViewController: UIViewController {
             cardView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
             
             label.translatesAutoresizingMaskIntoConstraints = false
+            labelDeskripsi.translatesAutoresizingMaskIntoConstraints = false
             
             cardView.addSubview(label)
-            label.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 20).isActive = true
-            label.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -20).isActive = true
+            cardView.addSubview(labelDeskripsi)
+            
+            label.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).isActive = true
+            label.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).isActive = true
+            
+            labelDeskripsi.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).isActive = true
+            labelDeskripsi.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).isActive = true
+            labelDeskripsi.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20).isActive = true
         }
         
         func sikatSet(data:SikatData){
             label.text = data.title
+            labelDeskripsi.text = data.description
         }
         
         required init?(coder: NSCoder) {
