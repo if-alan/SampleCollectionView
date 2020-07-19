@@ -12,7 +12,7 @@ extension SampleCollectionViewController: UICollectionViewDataSource, UICollecti
     
     /** SUM COLUMN  */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return listData.count
     }
     
     /** CONTENT ITEM  */
@@ -20,11 +20,6 @@ extension SampleCollectionViewController: UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CustomCell
         cell.sikatSet(data: listData[indexPath.item])
         return cell
-    }
-    
-    /** SUM ROW  */
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return listData.count
     }
     
     /** SPACE BETWEEN ROW*/

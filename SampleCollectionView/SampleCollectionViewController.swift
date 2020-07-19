@@ -9,15 +9,16 @@ import UIKit
 struct SikatData {
     var title : String
     var description : String
+    var color : UIColor
 }
 
 class SampleCollectionViewController: UIViewController {
     let listData: [SikatData] = [
-        SikatData(title: "Farel", description: "yo yo yo"),
-        SikatData(title: "Zaini", description: "yo yo yo"),
-        SikatData(title: "Sukmo", description: "yo yo yo"),
-        SikatData(title: "Redha", description: "yo yo yo"),
-        SikatData(title: "Alan", description: "yo yo yo")
+        SikatData(title: "Farel", description: "yo yo yo", color: .white),
+        SikatData(title: "Zaini", description: "yo yo yo", color: .blue),
+        SikatData(title: "Sukmo", description: "yo yo yo", color: .green),
+        SikatData(title: "Redha", description: "yo yo yo", color: .gray),
+        SikatData(title: "Alan", description: "yo yo yo", color: .systemRed)
     ]
     
     var cellId = "testId"
@@ -48,12 +49,11 @@ class SampleCollectionViewController: UIViewController {
     
     /** CUSTOM CELL */
     class CustomCell: UICollectionViewCell {
+        let cardView = UIView()
         let label = UILabel()
         let labelDeskripsi = UILabel()
         override init(frame: CGRect) {
             super.init(frame: frame)
-            let cardView = UIView()
-            cardView.backgroundColor = .green
             cardView.translatesAutoresizingMaskIntoConstraints = false
             addSubview(cardView)
             
@@ -73,12 +73,13 @@ class SampleCollectionViewController: UIViewController {
             
             labelDeskripsi.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).isActive = true
             labelDeskripsi.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).isActive = true
-            labelDeskripsi.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20).isActive = true
+            labelDeskripsi.topAnchor.constraint(equalTo: label.bottomAnchor).isActive = true
         }
         
         func sikatSet(data:SikatData){
             label.text = data.title
             labelDeskripsi.text = data.description
+            cardView.backgroundColor = data.color
         }
         
         required init?(coder: NSCoder) {
